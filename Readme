@@ -1,0 +1,19 @@
+Setting up mongodb
+==================
+
+ curl -O https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-3.2.7.tgz
+ 
+  tar -zxvf mongodb-linux-x86_64-3.2.7.tgz
+  
+   mkdir -p mongodb
+   
+   cp -R -n mongodb-linux-x86_64-3.2.7/ mongodb  
+   
+   vim ~/.bashrc
+   
+  mkdir -p /data/db
+  export PATH=/home/ubuntu/workspace/mongodb-linux-x86_64-3.2.7/bin:$PATH
+  
+  use admin
+db.shutdownServer()
+==================

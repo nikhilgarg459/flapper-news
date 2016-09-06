@@ -62,7 +62,7 @@ router.put('/posts/:post/upvote', function(req, res, next){
 	});
 });
 
-/* Creating comments for partivular post */
+/* Creating comments for particular post */
 
 router.post('/posts/:post/comments', function(req, res, next) {
   var comment = new Comment(req.body);
@@ -86,7 +86,7 @@ router.param('comment', function(req, res, next, id){
 
 	query.exec(function (err, comment){
 		if(err) { return next(err); }
-		if(!comment) { return next(new Error('can\'t find post')); }
+		if(!comment) { return next(new Error('can\'t find comment')); }
 		req.comment = comment;
 		return next();
 	});
@@ -101,12 +101,12 @@ router.put('/posts/:post/comments/:comment/upvote', function(req, res, next){
 	});
 });
 
-router.get('/posts/:post/comments/:comment', function(req, res, next) {
+/*router.get('/posts/:post/comments/:comment', function(req, res, next) {
   Post.find(function(err, posts){
     if(err){ return next(err); }
 
     res.json(req.comment);
   });
 });
-
+*/
 module.exports = router;
