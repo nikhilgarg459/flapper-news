@@ -17,3 +17,5 @@ Setting up mongodb
   use admin
 db.shutdownServer()
 ==================
+
+NODE_ENV=production npm start

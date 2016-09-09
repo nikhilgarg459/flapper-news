@@ -92,7 +92,7 @@ app.controller("MainCtrl",[
 			}
 			posts.create({
 				title: $scope.title,
-				link: $scope.link, 
+				link: $scope.link 
 			});
 			$scope.title='';
 			$scope.link='';
